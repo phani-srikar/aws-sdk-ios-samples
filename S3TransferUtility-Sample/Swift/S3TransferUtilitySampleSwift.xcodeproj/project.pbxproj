@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17480E031BC833D10022B2CF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17480E021BC833D10022B2CF /* Launch Screen.storyboard */; };
+		43CC6B1924130CBD004246CB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC6B1824130CBD004246CB /* SignInViewController.swift */; };
+		43CC6B1A24130CBD004246CB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CC6B1824130CBD004246CB /* SignInViewController.swift */; };
 		806CCAC421BAFCF10083836F /* S3TransferUtilitySampleSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806CCAC321BAFCF10083836F /* S3TransferUtilitySampleSwiftUITests.swift */; };
 		8076715221C4876400D068E1 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 8076715121C4876300D068E1 /* awsconfiguration.json */; };
 		BDCC7EC119DE50AB008B2510 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCC7EC019DE50AB008B2510 /* AppDelegate.swift */; };
@@ -32,8 +33,8 @@
 /* Begin PBXFileReference section */
 		0904D7574D2D8458D57AFA18 /* Pods-S3TransferUtilitySampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S3TransferUtilitySampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S3TransferUtilitySampleSwift/Pods-S3TransferUtilitySampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		17324510F844CFCA52567EFB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		17480E021BC833D10022B2CF /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		249182B875FFD644D3950992 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		43CC6B1824130CBD004246CB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		806CCAC121BAFCF10083836F /* S3TransferUtilitySampleSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = S3TransferUtilitySampleSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		806CCAC321BAFCF10083836F /* S3TransferUtilitySampleSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S3TransferUtilitySampleSwiftUITests.swift; sourceTree = "<group>"; };
 		806CCAC521BAFCF10083836F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,7 +121,7 @@
 				BDCC7EC619DE50AB008B2510 /* Main.storyboard */,
 				BDCC7EC919DE50AB008B2510 /* Images.xcassets */,
 				BDCC7EBE19DE50AB008B2510 /* Supporting Files */,
-				17480E021BC833D10022B2CF /* Launch Screen.storyboard */,
+				43CC6B1824130CBD004246CB /* SignInViewController.swift */,
 			);
 			path = S3BackgroundTransferSampleSwift;
 			sourceTree = "<group>";
@@ -201,6 +202,7 @@
 					};
 					BDCC7EBA19DE50AB008B2510 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = B46Y73FCAC;
 						LastSwiftMigration = 1020;
 					};
 				};
@@ -238,7 +240,6 @@
 			files = (
 				8076715221C4876400D068E1 /* awsconfiguration.json in Resources */,
 				BDCC7EC819DE50AB008B2510 /* Main.storyboard in Resources */,
-				17480E031BC833D10022B2CF /* Launch Screen.storyboard in Resources */,
 				BDCC7ECA19DE50AB008B2510 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,20 +286,24 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-S3TransferUtilitySampleSwift/Pods-S3TransferUtilitySampleSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -312,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43CC6B1A24130CBD004246CB /* SignInViewController.swift in Sources */,
 				806CCAC421BAFCF10083836F /* S3TransferUtilitySampleSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +329,7 @@
 				BDCC7EC519DE50AB008B2510 /* DownloadViewController.swift in Sources */,
 				BDCC7EC119DE50AB008B2510 /* AppDelegate.swift in Sources */,
 				BDCC7EC319DE50AB008B2510 /* UploadViewController.swift in Sources */,
+				43CC6B1924130CBD004246CB /* SignInViewController.swift in Sources */,
 				BDCC7EE619DE5F09008B2510 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,10 +517,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = B46Y73FCAC;
 				INFOPLIST_FILE = S3BackgroundTransferSampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amazonaws.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = S3TransferUtilitySampleSwift;
 				PRODUCT_NAME = S3TransferUtilitySampleSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -527,10 +535,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = B46Y73FCAC;
 				INFOPLIST_FILE = S3BackgroundTransferSampleSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.amazonaws.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = S3TransferUtilitySampleSwift;
 				PRODUCT_NAME = S3TransferUtilitySampleSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
